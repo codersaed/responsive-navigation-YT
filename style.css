@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background: #6c5ce7;
+    height: 60px;
+    width: 100%;
+}
+.logo{
+    color: #fff;
+    line-height: 60px;
+    padding: 0 50px;
+    text-decoration: none;
+    font-size: 22px;
+}
+.navbar ul{
+    float: right;
+    margin-right: 50px;
+}
+.navbar ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 8px;
+}
+.navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+.navbar ul li a.active,a:hover{
+    background: #30336b;
+    transition: .3s;
+}
+.iconbtn{
+    color: #fff;
+    font-size: 20px;
+    float: right;
+    line-height: 60px;
+    margin: 0 50px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 736px) {
+    .iconbtn{
+        display: block;
+    }
+    .navbar ul{
+        background: #686de0;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        padding: 0 40px;
+        text-align: end;
+        transition: all .5s ease-in-out;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    #check{
+        display: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
